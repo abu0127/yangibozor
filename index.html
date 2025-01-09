@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="./icons/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+  <meta name="theme-color" content="#000000">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
+
+
+  <!--title-->
+  <title>hofmann</title>
+  <!--style-->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      font-family: sans-serif;
+    }
+
+    body {
+     
+    }
+
+   h1{
+    font-weight: bold;
+  background: linear-gradient(to right, #ff7e5f, #feb47b); /* Arka plan */
+  -webkit-background-clip: text; /* Yazıya uygula */
+  -webkit-text-fill-color: transparent;
+      font-family: 'Bebas Neue', serif;
+   }
+
+    header {
+      display: flex;
+      z-index: 100;
+      align-items: center;
+      justify-content: space-between;
+      width: 100vw;
+      height: 60px;
+      position: fixed;
+      background: #FFFFFF;
+      box-shadow: 2px 0 10px 7px rgba(0, 0, 0, .2);
+      top: -100px;
+      overflow: hidden;
+      animation: header .6s 2s ease forwards;
+    }
+
+    @keyframes header {
+      100% {
+        top: 0
+      }
+    }
+
+    .logo img {
+      position: relative;
+      bottom: -30px;
+      width: 200px;
+      height: 45px;
+      margin-left: 1rem;
+      opacity: 0;
+      animation: logo .7s 2.6s ease forwards;
+    }
+
+    @keyframes logo {
+      100% {
+        bottom: 0;
+        opacity: 1;
+      }
+    }
+
+    header i {
+      margin-right: 2rem;
+      font-size: 35px;
+
+    }
+
+    section {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      
+      background: rgb(255, 255, 255);
+background: radial-gradient(circle, rgba(255, 255, 255, 1) 21%, rgba(244, 244, 244, 1) 31%, rgba(238, 238, 238, 1) 35%, rgba(173, 173, 173, 1) 84%, rgba(173, 173, 173, 1) 100%);
+    }
+
+    .menu {
+      height: 50vh;
+      width: 100px;
+      z-index: 50;
+      background: #0000005C;
+      backdrop-filter: blur(20px);
+      position: fixed;
+      right: 0px;
+      top: -1000px;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+    }
+
+    .menu i {
+      font-size: 40px;
+      margin-top: 2rem;
+    }
+
+    .menu a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-flow: column;
+      color: #D3D3D3;
+    }
+    
+    /**  home **/
+
+    .containet-home {
+      width: 320px;
+      padding: 10px;
+
+    }
+
+    .home-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      backdrop-filter: blur(10px);
+    }
+    
+    .text {
+   /* Yazıyı şeffaf yap */
+}
+
+    .txt1 {
+      font-size: 48px;
+  font-weight: bold;
+  background: linear-gradient(to right, #ff7e5f, #feb47b); /* Arka plan */
+  -webkit-background-clip: text; /* Yazıya uygula */
+  -webkit-text-fill-color: transparent;
+      font-family: 'Bebas Neue', serif;
+      position: relative;
+      font-size: 59px;
+      text-align: center;
+      top: 225px;
+      opacity: 0;
+      animation: txt1 1s 1.5s forwards;
+    }
+
+    @keyframes txt1 {
+      100% {
+        top: 125px;
+        opacity: 1;
+      }
+    }
+
+    .txt2 {
+      font-family: 'Bebas Neue', serif;
+      font-weight: 900;
+      color: #ffffff;
+      position: relative;
+      top: 200px;
+      font-size: 30px;
+      text-align: center;
+      opacity: 0;
+      z-index: 100;
+      animation: txt2 1.2s 1.9s forwards;
+    }
+
+    @keyframes txt2 {
+      100% {
+        top: 0px;
+        opacity: 1;
+      }
+    }
+
+    .home-paint {
+      position: relative;
+      height: 420px;
+      width: 300px;
+      top: 200px;
+      opacity: 0;
+      animation: home-paint 1.2s 1.7s forwards;
+    }
+
+    @keyframes home-paint {
+      100% {
+        top: 0;
+        opacity: 1;
+      }
+    }
+
+    .home-paint img {
+      position: absolute;
+
+    }
+
+    .shape {
+      left: 70px;
+      top: 100px;
+    }
+
+    .shape1 {
+      left: -30px;
+      top: 220px;
+      z-index: 1;
+    }
+
+    .shape2 {
+      right: -30px;
+      top: 235px;
+    }
+
+    .shape3 {
+      top: 275px;
+      right: 40px;
+      z-index: 2;
+    }
+
+
+    .shadow {
+      position: relative;
+      display: inline-block;
+      top: 400px;
+      width: 300px;
+      height: 20px;
+      background: #00000024;
+      border-radius: 50%;
+      box-shadow: 0 0 10px 5px #00000024;
+    }
+    
+    /**  servis **/
+
+    .servis{
+     
+     background-size: 100px;
+     background-position: right;
+    
+    }
+    .servisContainer{
+     position: relative;
+     height: 100vh;
+     width:340px;
+   
+    }
+    .servisTxt1{
+     position: relative;
+     display: flex;
+     justify-content: center;
+     opacity: 0;
+     transition: .9s ease-in;
+     font-size: 20px;
+    }
+    .servisTxt1 div h1{
+     background: linear-gradient(to right, #00199C, #02B8C0);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+    }
+    .sertxt1{font-size: 55px; }
+
+    .servisImg1{
+     top:-90px;
+     position: relative;
+     width: 300px;
+     height: 300px;
+     background: url("./ditals/servisShape1.png");
+     background-size: cover;
+     opacity: 0;
+     transition: .9s ease-in;
+     z-index: 2;
+     
+    }
+    .servisImg2{
+     position: relative;
+     top: -100px;
+     width: 300px;
+     height: 280px;
+     margin: 0 auto;
+     display: flex;
+     flex-flow: column;
+     opacity: 0;
+     transition: .9s ease-in;
+    
+     
+    }
+    .servisImg2 img{z-index: 2;}
+    .shadow-servis{
+     position: absolute;
+     display: inline-block;
+     width: 300px;
+     height: 20px;
+     background: #00000024;
+     border-radius: 50%;
+     box-shadow: 0 0 10px 5px #00000024;
+     bottom: 0;
+    }
+    .sertxt4{
+     position: absolute;
+     font-size: 65px;
+     opacity: 1;
+     z-index: 1;
+     width: 100%;
+     text-align: center;
+     
+    }
+    
+
+   /**  map  **/
+
+    .maps {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .map {
+      width: 300px;
+      height: 300px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 5px 5px 15px 3px #0000003B;
+    }
+
+    .menu-2 {
+      width: 100px;
+      height: 70px;
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      position: absolute;
+      bottom: 15%;
+    }
+
+    .menu-2 a i {
+      font-size: 25px;
+    }
+
+    .menu-2 a {
+      color: #EAE9E9;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+    }
+    
+     .hidden {
+  display: none;
+ }
+
+  
+ footer{
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  width: 100%;
+  height: 300px;
+  background: #000647;
+  padding: 0;
+  margin: 0;
+  
+ }
+ .copy{ 
+  color: #EAE9E9;
+  position: absolute;
+  bottom: 10%;
+ }
+ 
+  </style>
+</head>
+<!--body-->
+
+<body>
+  <div class="menu">
+
+    <a href="#map">
+      <i class="fa-solid fa-location-dot"></i>
+      Manzil
+    </a>
+
+    <a href="">
+      <i class="fa-brands fa-instagram"></i>
+      Instagram
+    </a>
+
+    <a href="">
+      <i class="fa-brands fa-telegram"></i>
+      Telegram
+    </a>
+
+  </div>
+
+  <!--header-->
+  <header>
+    <!--logo-->
+    <div class="logo">
+      <img src="./icons/IMG_0300.jpeg" alt="./icons/">
+
+    </div>
+    <div class="btn">
+      <i class="fa-solid fa-bars open"></i>
+      <i class="fa-solid fa-xmark close hidden"></i>
+    </div>
+
+  </header>
+
+  <!--home-->
+
+  <section class="section home-section">
+    <div class="containet-home">
+      <h1 class="txt1">Assalomu aleykum</h1>
+      <div class="home-paint">
+        <img class="shape" src="./ditals/home-shape.png" height="300px" alt="">
+        <img class="shape1" src="./ditals/shape1.png" height="200px" alt="">
+        <img class="shape2" src="./ditals/television.png" width="250px" alt="">
+        <img class="shape3" src="./ditals/shape3.png" height="150px">
+        <span class="shadow"></span>
+      </div>
+      <h1 class="txt2">Sifat va ishonch siz uchun</h1>
+    </div>
+  </section>
+  
+   <!--servis-->
+  <section class="servis">
+   <div class="servisContainer">
+    <div class="servisTxt1">
+     <div>
+       <h1 class="sertxt1">Sizga narxi</h1>
+       <h1 class="sertxt2">va sifat jixatidan eng yaxshisini</h1>
+       <h1 class="sertxt3">taklif etamiz</h1>
+     </div>
+   </div>
+   <div class="servisImg1"></div>
+   <div class="servisImg2">
+    <h1 class="sertxt4">mega sell</h1>
+    <img src="./ditals/servisShape2.png" alt="">
+    <span class="shadow-servis"></span>
+   </div>
+  </div>
+  </section>
+  
+
+  <section class="section maps">
+    <div class="map" id="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3031.5437413554387!2d70.95597607591398!3d40.551668271418244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDDCsDMzJzA2LjAiTiA3MMKwNTcnMzAuOCJF!5e0!3m2!1sru!2s!4v1732293037226!5m2!1sru!2s"
+        width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+   
+     <footer>
+   <div class="menu-2">
+
+    <a href="">
+     <i class="fa-brands fa-instagram"></i>
+     
+    </a>
+
+    <a href="">
+     <i class="fa-brands fa-telegram"></i>
+    
+    </a>
+   </div>
+   
+ <p class="copy"> </p>
+
+  </footer>
+
+  </section>
+  
+
+
+  <!--script-->
+  <script>
+
+
+let sections = document.querySelectorAll('section');
+let menu = document.querySelector('.open');
+let close = document.querySelector('.close');
+let menuBody = document.querySelector('.menu');
+let servisImg1 = document.querySelector('.servisImg1');
+let servisTxt1 = document.querySelector('.servisTxt1');
+let servisImg2 = document. querySelector('.servisImg2');
+
+
+
+    //menu animation
+    menu.addEventListener('click', () => {
+      menuBody.style.top = 0;
+      menuBody.style.transition = '.7s'
+      menu.classList.toggle('hidden')
+      close.classList.toggle('hidden')
+    })
+    close.addEventListener('click', () => {
+      menu.classList.toggle('hidden')
+      close.classList.toggle('hidden')
+      menuBody.style.top = '-1000px';
+      menuBody.style.transition = '.5s'
+    })
+    window.addEventListener('scroll', () => {
+      menuBody.style.top = '-1000px';
+      menuBody.style.transition = '.5s'
+      close.classList.add('hidden')
+      menu.classList.remove('hidden')
+    })
+
+
+window.addEventListener('scroll', () => {
+ let scrollPos = window.scrollY;
+
+ sections.forEach((item, index) => {
+  let offset = item.offsetTop - 500;
+  let height = item.offsetHeight;
+
+  if (scrollPos >= offset && scrollPos < offset + height) {
+
+   if (item.classList.contains('servis')) {
+    servisTxt1.style.opacity ='1';
+    
+    setTimeout(() => {
+     servisImg1.style.opacity ='1';
+    } ,700);
+    
+   
+   setTimeout(() => {
+     servisImg2.style.opacity = '1';
+    }, 1700)
+   
+   }
+          
+
+
+  }
+ });
+});
+
+let copy = document.querySelector('.copy');
+
+function getCurrentYear() {
+ const currentYear = new Date().getFullYear(); 
+ return currentYear;
+}
+copy.innerHTML =`&copy; ${getCurrentYear()} Barcha huquqlar himoyalangan.`
+
+console.log(getCurrentYear()); 
+
+
+
+
+  </script>
+</body>
+
+</html>
