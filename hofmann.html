@@ -404,6 +404,7 @@
 <!--body-->
 
 <body>
+  <div class="loadBack">
   <div id="load">
     <div>G</div>
     <div>N</div>
@@ -413,7 +414,7 @@
     <div>O</div>
     <div>L</div>
   </div>
-
+</div>
   <div class="content">
 
     <a href="#map">
@@ -517,8 +518,12 @@
   <script>
     window.addEventListener('load',()=>{
       setTimeout(()=>{
-         document.querySelector('#load').style.display= 'none';
+        
           document.querySelector('.content').style.display= 'block';
+      }, 2700)
+      setTimeout(()=>{
+         document.querySelector('.loadBack').style.display= 'none';
+          
       }, 4500)
     
 
