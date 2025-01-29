@@ -10,10 +10,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
+  
     href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
     rel="stylesheet">
 
-
+<link rel="stylesheet" href="loadin.css">
   <!--title-->
   <title>hofmann</title>
   <!--style-->
@@ -392,12 +393,28 @@
       position: absolute;
       bottom: 10%;
     }
+  .content{
+    display: none;
+  }
+
+  
+
   </style>
 </head>
 <!--body-->
 
 <body>
-  <div class="menu">
+  <div id="load">
+    <div>G</div>
+    <div>N</div>
+    <div>I</div>
+    <div>D</div>
+    <div>A</div>
+    <div>O</div>
+    <div>L</div>
+  </div>
+
+  <div class="content">
 
     <a href="#map">
       <i class="fa-solid fa-location-dot"></i>
@@ -414,7 +431,7 @@
       Telegram
     </a>
 
-  </div>
+  
 
   <!--header-->
   <header>
@@ -495,9 +512,19 @@
   </section>
 
 
-
+</div>
   <!--script-->
   <script>
+    window.addEventListener('load',()=>{
+      setTimeout(()=>{
+         document.querySelector('#load').style.display= 'none';
+          document.querySelector('.content').style.display= 'block';
+      }, 4500)
+    
+
+
+
+    })
 
 
     let sections = document.querySelectorAll('section');
@@ -572,8 +599,8 @@
 
 
 
-
   </script>
+ 
 </body>
 
 </html>
